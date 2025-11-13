@@ -1,0 +1,64 @@
+# ✨ Adaptive Card Customizado: Lembrete
+
+Este projeto é um exemplo simples e rápido de como personalizar a aparência de um Adaptive Card para criar uma interface de usuário mais engajadora e com uma identidade visual distinta.
+O objetivo é demonstrar a flexibilidade do JSON Schema dos Adaptive Cards e como adicionar estilo via propriedades de design.
+O projeto pode ser implantado em plataformas como Microsoft Teams, Outlook ou Power Virtual Agents (Bots).
+
+## 💡 Sobre o Projeto
+
+O cartão personalizado foi desenhado para atuar como um Lembrete de Tarefa
+
+Estilização: Uso de cores, espaçamento e fontes customizadas para um visual mais amigável.
+Fundo Customizado: Inclusão de uma imagem ou textura sutil (backgroundImage) para adicionar profundidade.
+Ação Integrada: Um botão de ação (Action.OpenUrl ou Action.Submit) que simula a conclusão da tarefa.
+Foco na UX: Uso de emojis e frases de incentivo para tornar o lembrete menos "robotizado".
+
+## 🛠️ Tecnologias Utilizadas
+
+O Adaptive Card é essencialmente um objeto JSON que descreve o layout e o conteúdo do cartão.
+Adaptive Cards Schema (JSON): Utilizado para definir os elementos (TextBlock, Container, Action).
+Editor Online Adaptive Cards: Ferramenta utilizada para prototipagem e validação do JSON.
+CSS (Conceitual): Os estilos aplicados ao JSON imitam técnicas de CSS (cores, espaçamento).
+
+### 📁 Estrutura do Arquivo JSON (Exemplo Abstrato)
+
+Abaixo está um modelo simplificado da estrutura JSON que define o cartão, destacando as propriedades de customização:
+
+´´´
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4",
+  "backgroundImage": "https://sua-url-de-imagem/fundo-sutil.png", // Imagem de fundo customizada
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "🚀 Missão do Dia!",
+      "size": "Medium",
+      "weight": "Bolder",
+      "color": "Accent"
+    },
+    {
+      "type": "Container",
+      "style": "emphasis", // Aplica uma cor de fundo sutil ao container
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Não se esqueça de revisar o Módulo Alpha antes das 15h."
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "✅ Concluir Tarefa",
+      "style": "positive", // Destaca o botão
+      "data": { "taskId": "12345" }
+    }
+  ]
+}
+´´´
+## ⚠️ Direitos Autorais e Licença
+
+*Copyright (c) [Seu Nome ou Nome do Usuário] [Ano de Início]. Todos os Direitos Reservados (All Rights Reserved).*
+*Este código-fonte é disponibilizado publicamente apenas para fins de visualização e aprendizado. Não é permitida a cópia, distribuição, modificação ou uso comercial do código sem a autorização expressa do autor.*
